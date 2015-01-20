@@ -28,7 +28,7 @@ public class DownloadImages {
     private static final String attendanceURL = "https://academics.vit.ac.in/parent/attn_report.asp?sem=WS";
     //wdregno,wdpswd,vrfcd
     //The path of the folder that you want to save the images to
-    private static final String folderPath = "C:\\Users\\kp\\Desktop\\scrape";
+    private static final String folderPath = "somepath";
 
     public static void main(String[] args) throws IOException {
     	Response res = 	Jsoup.connect(webSiteURL).method(Method.GET).timeout(30000).execute();
@@ -40,7 +40,7 @@ public class DownloadImages {
                 .ignoreContentType(true)
                 .method(Method.GET).timeout(30000).execute().bodyAsBytes();
     	
-    	FileOutputStream out = new FileOutputStream(new java.io.File("C:\\Users\\kp\\Desktop","captcha.bmp"));
+    	FileOutputStream out = new FileOutputStream(new java.io.File(folderPath,"captcha.bmp"));
     	out.write(cap);
     	out.close();
     	/*Response resultImageResponse = Jsoup.connect("https://academics.vit.ac.in/parent/captcha.asp").cookie("ASPSESSIONIDSQHDAQRQ", sessionid).ignoreContentType(true).execute();
