@@ -21,7 +21,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class DownloadImages {
+public class InitialTest {
 
     //The url of the website. This is just an example
     private static final String webSiteURL = "https://academics.vit.ac.in/parent/parent_login_submit.asp";
